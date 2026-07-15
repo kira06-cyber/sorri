@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root{
+    --plum:#2B1320;
+    --plum-soft:#3C1C2C;
+    --cream:#F5ECE6;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    background:radial-gradient(ellipse at top,var(--plum-soft),var(--plum) 70%);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:'Inter',sans-serif;
+    color:var(--cream);
+    padding:30px;
+}
+
+/* Main container */
+
+.welcome{
+    position:relative;
+    width:min(100%,1000px);
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    gap:15px;
+}
+
+/* Heading */
+
+.welcome h2{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(2rem,2vw,2rem);
+    text-align:center;
+}
+
+/* Description */
+
+.welcome p{
+    text-align:center;
+    font-size:clamp(.80rem,1vw,1.2rem);
+    line-height:1.6;
+}
+
+.welcome h5{
+    font-weight:normal;
+    font-size:clamp(.8rem,.5vw,1rem);
+    color:#d7cfcf;
+}
+
+/* Video */
+
+.video-frame{
+
+    width:100%;
+    max-width:900px;
+
+    background:rgba(32,11,11,.65);
+
+    padding:10px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.5);
+}
+
+.video-frame video{
+
+    width:100%;
+    display:block;
+
+    border-radius:10px;
+}
+
+/* Stickers */
+
+.sticker{
+    position:absolute;
+    font-size:clamp(35px,5vw,60px);
+    animation:float 3s ease-in-out infinite;
+    user-select:none;
+}
+
+.heart{
+    top:-15px;
+    left:20%;
+}
+
+.hear{
+    top:-10px;
+    right:20%;
+}
+
+/* Floating animation */
+
+@keyframes float{
+
+    0%,100%{
+        transform:translateY(0) rotate(-20deg);
+    }
+
+    50%{
+        transform:translateY(-6px) rotate(8deg);
+    }
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    body{
+        padding:15px;
+    }
+
+    .welcome{
+        gap:12px;
+    }
+
+    .video-frame{
+        padding:8px;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="welcome">
+
+    <span class="sticker heart">❤️</span>
+    <span class="sticker hear">❤️</span>
+
+    <h2>Just Me and You</h2>
+
+    <p>
+        A compilation video of me and my wife's randomness.
+    </p>
+
+    <div class="video-frame">
+        <video controls>
+            <source src="/image/vid.mp4" type="video/mp4">
+        </video>
+    </div>
+    <h5>(sorry Ali if it's low quality huhu ❤️)</h5>
+
+</div>
+
+</body>
+</html>

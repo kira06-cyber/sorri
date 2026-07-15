@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap');
+
+  :root{
+    --plum: #2B1320;
+    --plum-soft: #3C1C2C;
+    --rose: #E8A0B4;
+    --gold: #D4AF37;
+    --gold-soft: #E8CB7A;
+    --cream: #F5ECE6;
+    --cream-dim: #C9B8B0;
+  }
+
+  *{ box-sizing: border-box; margin:0; padding:0; }
+
+  body{
+    background: radial-gradient(ellipse at top, var(--plum-soft), var(--plum) 70%);
+    color: var(--cream);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    overflow-x: hidden;
+  }
+
+  
+  .screen.active{ display: block; animation: fadeIn 0.6s ease; }
+
+  @keyframes fadeIn{
+    from{ opacity: 0; transform: translateY(12px); }
+    to{ opacity: 1; transform: translateY(0); }
+  }
+
+.welcome{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+  
+  .container{
+    position:relative;
+    width:min(90vw,700px);
+    min-height:70vh;
+    display:flex;
+    flex-direction:column;
+    background:linear-gradient(to left,#380a13,#4f1230);
+    border:2px solid var(--gold);
+    border-radius:25px;
+    box-shadow:0 0 15px rgba(0,0,0,.5);
+    padding:40px;
+}
+  .letter{
+    width:100%;
+}
+
+.letter h3{
+    text-align:center;
+    font-family:'Playfair Display',serif;
+    font-size:clamp(20px,2vw,28px);
+    margin-bottom:25px;
+}
+
+.letter p{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(13px,1vw,15px);
+    line-height:1.8;
+    text-align:justify;
+    margin-inline:5%;
+}
+@media(max-width:600px){
+
+.container{
+    width:100%;
+    padding:20px;
+    border-radius:20px;
+}
+.letter h3{
+    margin-top:70px;
+}
+.letter p{
+    margin-inline:3%;
+    font-size:15px;
+}
+}
+</style>
+
+<body>
+<div class="welcome" stroke="#D4AF37" stroke-width="1.5">
+
+<div class="container" id="letter-border">
+
+    <div class="letter" id="write-letter">
+        <h3>I'm sorry</h3>
+        <p>Hello Ali,i'm writing this because i want to know what you really think about us now, or 
+            rather what i want to say about what happened yesterday. I know that i was wrong
+            for saying those stuff, and for always bringing everything from your past. I'm sorry if 
+            i made you cry. The moment i saw your tears fell that night, I realized that i'm not as being grateful enough,
+            that i always want to be the one who is in control, and it felt like i was choking you.
+            i was  just looking at you those times that you were crying, and when you lied about not crying, i even felt more terrified,
+            i was thinking about what have drove you to lie to me to that extent even tho i'm already seeing your tears.
+            and your fake cheered up face, your forced smile, your "it's nothing" face, I have never felt more resent towards myself than that moment.
+            It felt like your surpressing your emotions from me, and i didn't like it,cause it felt like i made you that way...Did I?
+            if i ever did, i'm sorry. Sorry will never be enough. I wanted to make up, but i don't even know were to start. I just want to say that i love you, and i will always love you.
+            But everything that happened yesterday opened my eyes, and i started to agree with you,that you don't deserve someone as messed up as me,and i don't deserve
+            a girlfriend as amazing as you. So, if you think if it would be better for us to quit, then i will respect your decision.I just don't want to make you cry anymore...But 
+            if you think that we can still fix it, then i will do my best to change for you. <br> <br>You're free to choose your own choice, and i will respect it...<br>thank you for everything Ali
+        </p>
+        </div>
+    </div>
+    </div>
+</div>
+

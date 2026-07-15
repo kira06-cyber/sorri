@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap');
+
+  :root{
+    --plum: #2B1320;
+    --plum-soft: #3C1C2C;
+    --rose: #E8A0B4;
+    --gold: #D4AF37;
+    --gold-soft: #E8CB7A;
+    --cream: #F5ECE6;
+    --cream-dim: #C9B8B0;
+  }
+
+  *{ box-sizing: border-box; margin:0; padding:0; }
+
+  body{
+    background: radial-gradient(ellipse at top, var(--plum-soft), var(--plum) 70%);
+    color: var(--cream);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    overflow-x: hidden;
+  }
+
+  
+  .screen.active{ display: block; animation: fadeIn 0.6s ease; }
+
+  @keyframes fadeIn{
+    from{ opacity: 0; transform: translateY(12px); }
+    to{ opacity: 1; transform: translateY(0); }
+  }
+
+.welcome{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.welcome h2{
+    text-align:center;
+    font-family:'Playfair Display',serif;
+    font-size:clamp(24px,4vw,36px);
+    margin-bottom:30px;
+}
+  
+  .container{
+    position:relative;
+    width:min(90vw,700px);
+    min-height:70vh;
+    display:flex;
+    flex-direction:column;
+    background:linear-gradient(to left,#380a13,#4f1230);
+    border:2px solid var(--gold);
+    border-radius:25px;
+    box-shadow:0 0 15px rgba(0,0,0,.5);
+    padding:40px;
+}
+  
+  .photo-left {
+    position:absolute;
+    width:30%;
+    background:white;
+    padding:10px;
+    border-radius:8px;
+    box-shadow:0 12px 25px rgba(0,0,0,.35);
+    max-width:250px;
+    top:55%;
+    left:-28%;
+    transform:rotate(8deg);
+
+  }
+  .Ali {
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:5px;
+  }
+  .photo-right{
+    position:absolute;
+    background:rgb(162, 93, 93);
+    padding:10px;
+    border-radius:8px;
+    box-shadow:0 12px 25px rgba(0,0,0,.35);
+    width:30%;
+    max-width:180px;
+    top:-2%;
+    right:-23%;
+    transform:rotate(-10deg);
+    z-index:30;
+}
+  .pin {
+    position:absolute;
+    width:18px;
+    height:18px;
+    background:#d43b3b;
+    border-radius:50%;
+    top:-8px;
+    left:50%;
+    transform:translateX(-50%);
+    box-shadow:0 3px 8px rgba(0,0,0,.35);
+}
+
+  .Ash{
+   width:100%;
+    height:auto;
+    display:block;
+    border-radius:5px;
+  }
+
+  .photo-top{
+    position:absolute;
+    background:rgb(36, 61, 42);
+    padding:10px;
+    border-radius:8px;
+    box-shadow:0 12px 25px rgba(0,0,0,.35);
+    width:40%;
+    max-width:300px;
+    top:15%;
+    left:-45%;
+    transform:rotate(-6deg);
+}
+
+  .photo-top::before,
+  .photo-top::after{
+    content:"";
+   position:absolute;
+    width:60px;
+    height:18px;
+    background:rgba(255,235,180,.6);
+    border:1px solid rgba(255,255,255,.6);
+  }
+  .photo-top::before{
+    top: -5px;
+    left: -3%;
+    transform:rotate(-18deg);
+  }
+  .photo-top::after{
+    top: -5px;
+    right: -20px;
+    transform:rotate(33deg);
+  }
+
+  .Ashki{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:5px;
+  }
+  .photo-right-tape{
+    position:absolute;
+    background:rgb(44, 9, 9);
+    padding:10px;
+    border-radius:8px;
+    box-shadow:0 12px 25px rgba(0,0,0,.35);
+    width:45%;
+    max-width:300px;
+    top:30%;
+    right:-45%;
+    transform:rotate(3deg);
+}
+.photo-right-tape::before,
+.photo-right-tape::after{
+    content: "";
+    position:absolute;
+    width:70px;
+    height:20px;
+    background:rgba(255,235,180,.6);
+    border:1px solid rgba(255,255,255,.6);
+}
+.photo-right-tape::before{
+     left:-25px;
+    bottom:15px;
+   transform: rotate(-20deg);
+}
+.photo-right-tape::after{
+    top: -5px;
+    right: -30px;
+   transform: rotate(20deg);
+}
+.photo-img{
+     width:100%;
+    height:auto;
+    display:block;
+    border-radius:5px;
+}
+.photo-polaroid {
+    position:absolute;
+    background:rgb(150, 73, 73);
+    padding:10px;
+    border-radius:8px;
+    box-shadow:0 12px 25px rgba(0,0,0,.35);
+    width:50%;
+    max-width:200px;
+    bottom:5%;
+    right:-28%;
+    transform:rotate(8deg);
+  }
+  .Honey {
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:5px;
+  }
+  .letter{
+    width:100%;
+}
+
+.letter h3{
+    text-align:center;
+    font-family:'Playfair Display',serif;
+    font-size:clamp(20px,2vw,28px);
+    margin-bottom:25px;
+}
+
+.letter p{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(13px,1vw,15px);
+    line-height:1.8;
+    text-align:justify;
+    margin-inline:5%;
+}
+
+.remark {
+    margin-top:35px;
+    text-align:right;
+    margin-right:8%;
+}
+.remark p{
+    font-size:clamp(10px,2vw,15px);
+    line-height:1.8;
+    text-align:right;
+    margin-right:5%;
+}
+@media(max-width:600px){
+
+.container{
+    width:100%;
+    padding:20px;
+    border-radius:20px;
+}
+
+.photo-left{
+    width:95px;
+    left:5px;
+    top:-15px;
+}
+
+.photo-top{
+    width:120px;
+    left:70px;
+    top:-20px;
+}
+.photo-right{
+    width:95px;
+    right:5px;
+    top:-15px;
+}
+.photo-right-tape,
+.photo-polaroid{
+    display:none;
+}
+.letter h3{
+    margin-top:70px;
+}
+.letter p{
+    margin-inline:3%;
+    font-size:15px;
+}
+}
+</style>
+
+<body>
+<div class="welcome" stroke="#D4AF37" stroke-width="1.5">
+    <h2>Words I want to Say</h2>
+
+<div class="container" id="letter-border">
+
+    <div class="photo-frame photo-left">
+        <div class="tape"></div>
+        <img src="/image/pic1.jpg" class="Ali" alt="ali">
+    </div>
+    <div class="photo-frame photo-right">
+    <div class="pin"></div>
+        <img src="/image/pic2.jpg" class="Ash" alt="ash">
+    </div>
+    <div class="photo-frame photo-top">
+        <img src="/image/pic5.jpg" class="Ashki" alt="ashki">
+    </div>
+        <div class="photo-frame photo-right-tape">
+        <img src="/image/pic6.jpg" class="photo-img" alt="Us">
+    </div>
+    <div class="photo-frame photo-polaroid">
+        <div class="pols"></div>
+        <img src="/image/pic3.jpg" class="Honey" alt="honey">
+    </div>
+
+    <div class="letter" id="write-letter">
+        <h3>Happy 16th Monthsary Baby!!!</h3>
+        <p>Hello honeey, Happy birthday to us!!
+            I hope you like this gift that i made hehe.
+            How many gifts have you opened?...Did you like each one?
+            I hope you do.
+            Thank you for staying with me this long. I never knew that
+            I would be able to get this far with you, well, more years to come! (no jinks included ksks). Sometimes i still think why? bakit ako pa? bat d nalang yung 
+            mga nakasama mo before. People you've liked before, like really, BAT BA KASI AKO?! shar UwU,na para bang d kita dinasal OwO
+            si lord d i, dapat akong pangutan on. But to be honest Ali, I asked lord na kunin ka din sakin, like make u unlove me. Kaso 
+            sinampal ako ng katutuhanan =3=, kaya ayon, were on our 16th month na WWWWWW kinikilig ako ~3~ <br>
+            
+            <br>I'm sorry baby, if sometimes i get upset and mad at you out of nowhere. And if sometimes, if ever i made you doubt 
+            my love and trust for you, don't Ali. I have never trusted anyone like this before nor Loved anyone as much as this 
+            before. Also i want to apologize for getting jealous about the people in your past. Yea ,I'm sorry for getting jealous
+            about your past, it's very crazy i know and not even a big deal since nakalipas na yun. But my brain kskskks, so sorry 
+            if sometimes i become like that. <br><br> 
+
+            I was thrilled to be making one of this again for you, these are 
+            the only projects i made without a headache. While doing this though, I came
+            across some of my projects back then, remember the letter i made for you on valentines day?
+            haha it's ironic how back then i was saying that even though you will not be mine...keme keme
+            hahahahahaha, ang oa ko dun T~T. Anyway, I'm just happy that noon,yun yung ginagawa ko,
+            and now wwww, now i'm greeting you with our 16th!!!, damn time do fly fast. 
+            I'm so happy na you came and 
+            entered my life my Ali. Wishing for more years with you, with
+            lots of fun and lots and lots of love. I love you so much babyyyy :3 . </p>
+        <div class="remark" id="remark">
+            <h4>Yours Truly</h4>
+            <p>Aki❤️</p>
+        </div>
+        
+    </div>
+    </div>
+</div>
+

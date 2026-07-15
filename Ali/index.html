@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>For You</title>
+</head>
+<body>
+
+<!-- ============ LOCK SCREEN ============ -->
+<div class="screen active" id="lock-screen">
+  <div class="lock-wrap">
+    <svg class="lock-icon" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5">
+      <rect x="4" y="10" width="16" height="10" rx="2"/>
+      <path d="M8 10V7a4 4 0 0 1 8 0v3"/>
+    </svg>
+    <h1>Something's waiting for you</h1>
+    <p>Enter the number to unlock it</p>
+
+    <div class="pin-hit-area" id="pin-hit-area">
+      <div class="pin-dots" id="pin-dots">
+        <div class="pin-dot"></div>
+        <div class="pin-dot"></div>
+        <div class="pin-dot"></div>
+        <div class="pin-dot"></div>
+        <div class="pin-dot"></div>
+      </div>
+    </div>
+    <input id="pin-input" type="tel" inputmode="numeric" maxlength="5" autocomplete="off" />
+    <div class="error-msg" id="error-msg">Not quite — try again</div>
+  </div>
+   <script src="script.js" defer></script>
+</div>
+</body>
+</html>
